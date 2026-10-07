@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sidebar</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <nav class="nav">
-            <div class="icons">
-                <button class="btno">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-                <button class="btnc">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <a href="#" class="items">
-                Products
-            </a>
-            <a href="#" class="items">
-                More
-            </a>
-            <a href="#" class="items">
-                About
-            </a>
-            <a href="#" class="items">
-                Info
-            </a>
-        </nav>
-    </div>
-</body>
+    <button class="btno">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"fill="none"viewBox="0 0 24 24"stroke-width="1.5"stroke="currentColor">
+            <path
+                stroke-linecap="round" stroke-linejoin="round"d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+    </button>
+    <nav class="nav">
+        <button class="btnc">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"stroke-width="1.5"stroke="currentColor" >
+                <path
+                    stroke-linecap="round" stroke-linejoin="round"d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        <a href="#" class="items">Products</a>
+        <a href="#" class="items">More</a>
+        <a href="#" class="items">About</a>
+        <a href="#" class="items">Info</a>
+
+    </nav>
+    <script>
+        const btno = document.querySelector(".btno");
+        const btnc = document.querySelector(".btnc");
+        const nav = document.querySelector(".nav");
+        btno.addEventListener("click", e => {
+            nav.classList.toggle("active");
+            btno.classList.toggle("hide");
+            btnc.classList.toggle("show");
+
+        });
+        btnc.addEventListener("click", e => {
+            nav.classList.toggle("active");
+            btno.classList.toggle("hide");
+            btnc.classList.toggle("show");
+        });
+    </script>
+ </body>
 </html>
